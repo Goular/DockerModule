@@ -44,6 +44,8 @@ Frok from https://github.com/yeszao/dnmp
     yum install -y lrzsz
     ```
 6. 其实可以执行./shell文件夹下的sh文件构建 ,记得chmod 777 ./xxx.sh文件
+
+7. 然后把当前用户加到docker用户组里面：$ sudo gpasswd -a ${USER} docker ,就不用每次启动Docker都得加sudo了
    
 ![Demo Image](./snapshot.png)
 

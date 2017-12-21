@@ -36,7 +36,7 @@ mysql:
     MYSQL_ROOT_PASSWORD: "zhao307161"
 
 redis:
-  image: redis:latest
+  image: redis:4.0.6-alpine
   ports:
     - "6379:6379"
   volumes:
