@@ -10,7 +10,7 @@
 # 安装Docker-Compose依赖
   yum install python-pip -y
 # 检测是否存在Docker-Compose包
-  pip uninstall docker-compose -y
+  pip uninstall docker-compose
 # 安装Docker-Compose
   pip install docker-compose -y
 # 从GitHub拉取Docker自动构建Redis,MySQL,Nginx的库
