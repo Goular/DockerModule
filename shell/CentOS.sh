@@ -1,4 +1,5 @@
 #!/bin/sh
+
 # 更新yum
   yum update
 # 安装GIT

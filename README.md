@@ -41,7 +41,7 @@ Docker deploying Nginx MySQL PHP7 in one key, support full feature functions.
     ```
     yum install -y lrzsz
     ```
-6. 其实可以执行./shell文件夹下的sh文件构建 
+6. 其实可以执行./shell文件夹下的sh文件构建 ,记得chmod 777 ./xxx.sh文件
    
 ![Demo Image](./snapshot.png)
 
