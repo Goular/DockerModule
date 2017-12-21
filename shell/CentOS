@@ -20,11 +20,7 @@
   rm -rf .git
 # 设置Docker加速
   sudo mkdir -p /etc/docker
-  sudo tee /etc/docker/daemon.json <<-'EOF'
-  {
-    "registry-mirrors": ["https://36fzbw13.mirror.aliyuncs.com"]
-  }
-  EOF
+  sudo tee /etc/docker/daemon.json <<-'EOF' {"registry-mirrors": ["https://36fzbw13.mirror.aliyuncs.com"]} EOF
   sudo systemctl daemon-reload
   sudo systemctl restart docker
 # 打开Docker服务
