@@ -57,8 +57,8 @@ We need not change any other files, such as nginx config file or php.ini, everyt
 
 ### HTTPS and HTTP/2
 Default demo include 2 sites:
-* http://www.site1.com (same with http://localhost)
-* https://www.site2.com
+* http://www.site1.com  (use HTTP1.1)
+* https://www.site2.com (use HTTPS)
 
 To preview them, add 2 lines to your hosts file (at `/etc/hosts` on Linux and `C:\Windows\System32\drivers\etc\hosts` on Windows):
 ```
