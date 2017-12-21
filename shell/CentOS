@@ -19,7 +19,7 @@
   cd /drnmp
   rm -rf .git
 # 打开Docker服务
-  service start docker
+  service docker start
 # 执行Docker-Compose
   docker-compose up
 # 退出脚本
