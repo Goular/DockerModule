@@ -1,31 +1,35 @@
 #!/bin/sh
 # 更新yum
-  yum update -y
+yum update -y
 # 安装GIT
-  yum install git -y
+yum install git -y
 # 安装Docker
-  yum install docker -y
+yum install docker -y
 # 设置开机默认启动Docker
-  systemctl enable docker
+systemctl enable docker
 # 安装Docker-Compose依赖
-  yum install python-pip -y
+yum install python-pip -y
 # 检测是否存在Docker-Compose包
-  pip uninstall docker-compose
+pip uninstall docker-compose
 # 安装Docker-Compose
-  pip install docker-compose
+pip install docker-compose
 # 从GitHub拉取Docker自动构建Redis,MySQL,Nginx的库
-  git clone https://github.com/Goular/DockerModule.git /drnmp
+git clone https://github.com/Goular/DockerModule.git /drnmp
 # 删除git库，避免影响www文件夹其他代码的git clone
-  cd /drnmp
-  rm -rf .git
+cd /drnmp
+rm -rf .git
 # 设置Docker加速
-  sudo mkdir -p /etc/docker
-  sudo tee /etc/docker/daemon.json <<-'EOF' {"registry-mirrors": ["https://36fzbw13.mirror.aliyuncs.com"]} EOF
-  sudo systemctl daemon-reload
-  sudo systemctl restart docker
+mkdir -p /etc/docker
+tee /etc/docker/daemon.json <<-'EOF'
+{
+"registry-mirrors": ["https://36fzbw13.mirror.aliyuncs.com"]
+}
+EOF
+systemctl daemon-reload
+systemctl restart docker
 # 打开Docker服务
 #  service docker start
 # 执行Docker-Compose
-  docker-compose up
+docker-compose up
 # 退出脚本
-#  exit 0
+exit 0
