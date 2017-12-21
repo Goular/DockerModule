@@ -12,7 +12,7 @@
 # 检测是否存在Docker-Compose包
   pip uninstall docker-compose
 # 安装Docker-Compose
-  pip install docker-compose -y
+  pip install docker-compose
 # 从GitHub拉取Docker自动构建Redis,MySQL,Nginx的库
   git clone https://github.com/Goular/DockerModule.git /drnmp
 # 删除git库，避免影响www文件夹其他代码的git clone
