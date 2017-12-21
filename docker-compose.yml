@@ -33,9 +33,11 @@ mysql:
     - ./mysql/:/var/lib/mysql/:rw
     - ./log/mysql/:/var/log/mysql/:rw
   environment:
-    MYSQL_ROOT_PASSWORD: "123456"
+    MYSQL_ROOT_PASSWORD: "zhao307161"
 
 redis:
   image: redis:latest
   ports:
     - "6379:6379"
+  volumes:
+    - ./conf/redis/redis.conf:/path/to/redis.conf:ro
