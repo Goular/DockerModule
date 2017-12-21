@@ -19,9 +19,9 @@ Docker deploying Nginx MySQL PHP7 in one key, support full feature functions.
 ### Usage
 1. Install `git`, `docker` and `docker-compose`;
 	```
+	yum update
 	yum install git
 	yum install docker
-	yum update
 	yum install python-pip
 	pip uninstall docker-compose
 	pip install docker-compose
