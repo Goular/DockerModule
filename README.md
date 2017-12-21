@@ -30,13 +30,19 @@ Docker deploying Nginx MySQL PHP7 in one key, support full feature functions.
     ```
     $ git clone https://github.com/yeszao/dnmp.git
     ```
-4. Start docker containers:
+3. Start docker containers:
     ```
     $ docker-compose up
     ```
     You may need use `sudo` before this command in Linux.
-5. Go to your browser and type `localhost`, you will see:
+4. Go to your browser and type `localhost`, you will see:
 
+5. XShell 使用rz/sz命令 
+    ```
+    yum install -y lrzsz
+    ```
+6. 其实可以执行./shell文件夹下的sh文件构建 
+   
 ![Demo Image](./snapshot.png)
 
 The index file is located in `./www/site1/`.
