@@ -5,6 +5,8 @@
   yum install git
 # 安装Docker
   yum install docker
+# 设置开机默认启动Docker
+  systemctl enable docker
 # 安装Docker-Compose依赖
   yum install python-pip
 # 检测是否存在Docker-Compose包
