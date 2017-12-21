@@ -18,6 +18,8 @@
 # 删除git库，避免影响www文件夹其他代码的git clone
   cd /drnmp
   rm -rf .git
+# 打开Docker服务
+  service start docker
 # 执行Docker-Compose
   docker-compose up
 # 退出脚本
