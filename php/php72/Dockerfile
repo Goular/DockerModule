@@ -122,4 +122,4 @@ RUN pecl install redis-3.1.4 \
     && apt-get install -y libmemcached-dev zlib1g-dev \
     && pecl install memcached-3.0.4 \
     && docker-php-ext-enable memcached \
-    && pecl install swoole
+    && pecl install swoole \
