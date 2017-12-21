@@ -40,4 +40,4 @@ redis:
   ports:
     - "6379:6379"
   volumes:
-    - ./conf/redis/redis.conf:/path/to/redis.conf:ro
+    - ./conf/redis/redis.conf:/etc/redis/redis.conf:ro
