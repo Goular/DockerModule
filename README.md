@@ -46,6 +46,18 @@ Frok from https://github.com/yeszao/dnmp
 6. 其实可以执行./shell文件夹下的sh文件构建 ,记得chmod +x ./xxx.sh文件
 
 7. 然后把当前用户加到docker用户组里面：$ sudo gpasswd -a ${USER} docker ,就不用每次启动Docker都得加sudo了
+
+8. Docker PHP Composer 容器使用
+   ```
+    Run Composer through the Composer container:
+        $ docker run --rm -v $(pwd):/app composer/composer install
+    
+    Or run using a specific version of Composer:
+        $ docker run --rm -v $(pwd):/app composer/composer:1.1 install
+    
+    If working with packages installed via git ssh the local .ssh directory shall be mapped into the container:
+        $ docker run --rm -v $(pwd):/app -v ~/.ssh:/root/.ssh composer/composer install
+   ```
    
 ![Demo Image](./snapshot.png)
 
