@@ -42,5 +42,3 @@ redis:
   volumes:
     - ./conf/redis/redis.conf:/etc/redis/redis.conf:ro
 
-composer:
-  image: composer:master-alpine
