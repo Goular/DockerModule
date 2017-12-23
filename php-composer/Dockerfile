@@ -2,6 +2,7 @@ FROM php:7.2
 
 COPY ./sources.list.stretch /etc/apt/sources.list
 
+RUN groupadd -r composer && useradd -r -g composer composer
 USER composer
 
 WORKDIR /app
