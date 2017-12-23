@@ -3,9 +3,7 @@ FROM php:7.2
 COPY ./sources.list.stretch /etc/apt/sources.list
 
 RUN groupadd -r composer && useradd -r -g composer composer
-USER composer
 
-WORKDIR /app
 
 # Extensions: ctype, dom, fileinfo, ftp, hash, iconv, json, pdo, pdo_sqlite, session,
 # tokenizer, simplexml, xml, xmlreader, xmlwriter and phar are bundled and compiled into
@@ -105,5 +103,13 @@ RUN apt-get update \
 
 # Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin/ --filename=composer \
+# 前面内容都是需要root安装的，但是composer不建议root用户运行
+USER composer
 
-CMD['composer']
+COPY docker-entrypoint.sh /docker-entrypoint.sh
+
+WORKDIR /app
+
+ENTRYPOINT ["/docker-entrypoint.sh"]
+
+CMD ["composer"]
