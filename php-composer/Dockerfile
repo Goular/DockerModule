@@ -2,6 +2,10 @@ FROM php:7.2
 
 COPY ./sources.list.stretch /etc/apt/sources.list
 
+USER composer
+
+WORKDIR /app
+
 # Extensions: ctype, dom, fileinfo, ftp, hash, iconv, json, pdo, pdo_sqlite, session,
 # tokenizer, simplexml, xml, xmlreader, xmlwriter and phar are bundled and compiled into
 # PHP by default. If missing, install them directly by `docker-php-ext-install extension_name`
@@ -99,7 +103,6 @@ RUN apt-get update \
     #&& docker-php-ext-install ldap \
 
 # Composer
-  RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin/ --filename=composer \
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin/ --filename=composer \
 
-  #RUN useradd noroot -u 1000 -s /bin/bash 
- # USER noroot
+CMD['composer']
