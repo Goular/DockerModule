@@ -4,7 +4,6 @@ COPY ./sources.list.stretch /etc/apt/sources.list
 
 RUN groupadd -r composer && useradd -r -g composer composer
 
-
 # Extensions: ctype, dom, fileinfo, ftp, hash, iconv, json, pdo, pdo_sqlite, session,
 # tokenizer, simplexml, xml, xmlreader, xmlwriter and phar are bundled and compiled into
 # PHP by default. If missing, install them directly by `docker-php-ext-install extension_name`
@@ -106,10 +105,6 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin/ 
 # 前面内容都是需要root安装的，但是composer不建议root用户运行
 USER composer
 
-COPY docker-entrypoint.sh /docker-entrypoint.sh
-
 WORKDIR /app
 
-ENTRYPOINT ["/docker-entrypoint.sh"]
-
-CMD ["composer"]
+CMD ["composer","install"]
