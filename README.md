@@ -58,7 +58,9 @@ Frok from https://github.com/yeszao/dnmp
     If working with packages installed via git ssh the local .ssh directory shall be mapped into the container:
         $ docker run --rm -v $(pwd):/app -v ~/.ssh:/root/.ssh composer/composer install
    ```
-9. Composer使用: docker run -it -v $PWD:/app composer['composer'为容器名]
+9. Composer使用: docker run -it -v $PWD:/app composer['composer'为容器名] (已经为镜像创建工作目录/app)
+
+10. NPM,NODE使用：docker run -it -v $PWD:/app goular/node node -v    (已经为镜像创建工作目录/app)
    
 ![Demo Image](./snapshot.png)
 
