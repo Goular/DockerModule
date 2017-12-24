@@ -44,3 +44,7 @@ redis:
 
 composer:
   build: ./php-composer/
+
+node:
+  build: ./node
+
