@@ -17,7 +17,9 @@ pip install docker-compose
 git clone https://github.com/Goular/DockerModule.git /drnmp
 # 删除git库，避免影响www文件夹其他代码的git clone
 cd /drnmp
-rm -rf .git
+# 添加www文件夹权限为777
+chmod -R 777 ./www
+# rm -rf .git
 # 设置Docker加速
 mkdir -p /etc/docker
 tee /etc/docker/daemon.json <<-'EOF'
