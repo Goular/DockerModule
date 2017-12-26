@@ -1,7 +1,7 @@
 FROM node:latest
 
-RUN groupadd -r composer && useradd -r -g composer composer
+#RUN groupadd -r composer && useradd -r -g composer composer
 
-USER composer
+#USER composer
 
 WORKDIR /app
