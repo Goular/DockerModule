@@ -63,6 +63,8 @@ Frok from https://github.com/yeszao/dnmp
 10. NPM,NODE使用：docker run -it -v $PWD:/app goular/node node -v    (已经为镜像创建工作目录/app)
    
 11. 如何更新，只需要使用git pull，完成后再/drnmp文件夹下执行docker-compose build即可
+
+12. 由于jenkins牵涉了很多的基于root的操作，所以不集成在这个docker-compose项目中
    
 ![Demo Image](./snapshot.png)
 
