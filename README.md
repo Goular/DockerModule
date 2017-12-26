@@ -62,6 +62,8 @@ Frok from https://github.com/yeszao/dnmp
 
 10. NPM,NODE使用：docker run -it -v $PWD:/app goular/node node -v    (已经为镜像创建工作目录/app)
    
+11. 如何更新，只需要使用git pull，完成后再/drnmp文件夹下执行docker-compose build即可
+   
 ![Demo Image](./snapshot.png)
 
 The index file is located in `./www/site1/`.
