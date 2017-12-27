@@ -16,3 +16,4 @@ export JRE_HOME=$JAVA_HOME/jre
 EOF
 # 下面的语句shell无反应，需要手动终端执行，才有反应，执行下面语句后javac才有反应
 # source /etc/profile
+# export PATH=$JAVA_HOME/bin:$PATH,这句话会被自动翻译，但是我们不想让他翻译，所以暂时进行手动修改再去source，以后想到办法再改
