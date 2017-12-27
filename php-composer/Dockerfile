@@ -107,4 +107,7 @@ USER composer
 
 WORKDIR /app
 
+# 添加中国镜像
+RUN composer config -g repo.packagist composer https://packagist.phpcomposer.com
+
 CMD ["composer","install"]
